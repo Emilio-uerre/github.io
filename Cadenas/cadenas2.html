@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Strings: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="Cadenas\styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const quote = 'I dO nOT lIke gREen eGgS anD HAM';
+
+// Add your code here
+const lowerCase = quote.toLowerCase();
+const firstLetter = lowerCase.slice(0,1);
+const fixedQuote = lowerCase.replace(firstLetter, firstLetter.toUpperCase());
+const newFoods = fixedQuote.replace('green eggs and ham', 'dried garri and groundnut');
+const finalQuote = newFoods + '.'; 
+
+// Don't edit the code below here!
+const section = document.querySelector('section');
+
+section.innerHTML = ' ';
+const para1 = document.createElement('p');
+para1.textContent = fixedQuote;
+const para2 = document.createElement('p');
+para2.textContent = finalQuote;
+
+section.appendChild(para1);
+section.appendChild(para2);
+    
+  </script>
+
+</html>
